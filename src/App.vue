@@ -1,12 +1,36 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" class="row m-0">
+    <div>
+      <the-navigation-bar
+        :logo="image"
+        :menuButtons="menu"
+      />
+      <div class="spacer"></div>
     </div>
-    <router-view/>
+    <div class="col p-0" id="nav">
+      <router-view/>
+    </div>
   </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import TheNavigationBar from '@/components/TheNavigationBar.vue';
+
+/** Declare require method type for json imports */
+declare function require(name:string): Array<object>;
+
+@Component({
+  components: {
+    TheNavigationBar
+  }
+})
+
+export default class AppMain extends Vue {
+  image: string = '/img/logo.svg';
+  menu: Array<object> = require('@/content/Navigation.json');
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -16,14 +40,17 @@
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+
+.spacer {
+  width: 15vw;
+  min-width: 150px;
+  min-height: 15px;
+  height: 100%;
+}
+
+@media(max-width: 768px) {
+  .spacer {
+    display: none;
   }
 }
 </style>

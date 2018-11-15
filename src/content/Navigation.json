@@ -1,0 +1,18 @@
+[
+  {
+    "text": "Gallery",
+    "url": "/gallery"
+  },
+  {
+    "text": "Commissions",
+    "url": "/commissions"
+  },
+  {
+    "text": "About me",
+    "url": "/about"
+  },
+  {
+    "text": "Contact me",
+    "url": "/contact"
+  }
+]
