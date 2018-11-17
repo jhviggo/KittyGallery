@@ -17,7 +17,7 @@ import { Vue, Component, Prop } from 'vue-property-decorator';
 @Component
 export default class TheNavigationBar extends Vue {
   @Prop({ required: true }) logo!: string;
-  @Prop({required: true}) menuButtons!: Array<object>;
+  @Prop({ required: true }) menuButtons!: Array<object>;
 
   goToUrl(url: string): void {
     this.$router.push(url);
