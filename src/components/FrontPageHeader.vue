@@ -15,6 +15,6 @@ export default class FrontPageHeader extends Vue {
 
 <style scoped>
 .header__title {
-  white-space: pre;
+  white-space: pre-wrap;
 }
 </style>
