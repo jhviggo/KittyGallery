@@ -1,6 +1,6 @@
 <template>
   <div class="col-12 p-5">
-    <h1 class="m-4">{{ title }}</h1>
+    <h1 class="header__title">{{ title }}</h1>
   </div>
 </template>
 
@@ -12,3 +12,9 @@ export default class FrontPageHeader extends Vue {
   @Prop({ required: true }) title!: string;
 }
 </script>
+
+<style scoped>
+.header__title {
+  white-space: pre;
+}
+</style>

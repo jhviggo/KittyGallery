@@ -20,6 +20,6 @@ import ImageGallery from '@/components/ImageGallery.vue'
 })
 
 export default class FrontPage extends Vue {
-  title: string = 'Front page';
+  title: string = 'Hello.\nI\'m Kitty. Painter & artist from Denmark.';
 }
 </script>

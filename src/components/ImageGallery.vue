@@ -36,5 +36,6 @@
 
 img:hover {
   -webkit-filter: brightness(50%);
+  cursor: pointer;
 }
 </style>
