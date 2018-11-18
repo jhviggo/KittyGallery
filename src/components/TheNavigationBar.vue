@@ -43,7 +43,7 @@ export default class TheNavigationBar extends Vue {
   min-width: 150px;
   height: 100%;
   background-color: #3C3C3C;
-  position: absolute;
+  position: fixed;
 }
 
 .btn-custom {
