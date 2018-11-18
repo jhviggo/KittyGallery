@@ -9,6 +9,6 @@ import { Vue, Component, Prop } from 'vue-property-decorator';
 
 @Component
 export default class FrontPageHeader extends Vue {
-  @Prop({ required: true }) title: string;
+  @Prop({ required: true }) title!: string;
 }
 </script>
