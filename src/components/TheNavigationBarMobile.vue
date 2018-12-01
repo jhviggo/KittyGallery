@@ -65,7 +65,7 @@ export default class TheNavigationBarMobile extends Vue {
 }
 
 #nav-bar__toggle {
-  width: 50px;
+  width: 52px;
   height: 50px;
   background-color: #3C3C3C;
   color: white;
