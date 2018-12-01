@@ -1,6 +1,10 @@
 <template>
   <div id="app" class="row m-0">
     <div>
+      <the-navigation-bar-mobile
+        :logo="image"
+        :menuButtons="menu"
+      />
       <the-navigation-bar
         :logo="image"
         :menuButtons="menu"
@@ -16,13 +20,15 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import TheNavigationBar from '@/components/TheNavigationBar.vue';
+import TheNavigationBarMobile from '@/components/TheNavigationBarMobile.vue';
 
 /** Declare require method type for json imports */
 declare function require(name:string): Array<object>;
 
 @Component({
   components: {
-    TheNavigationBar
+    TheNavigationBar,
+    TheNavigationBarMobile
   }
 })
 
