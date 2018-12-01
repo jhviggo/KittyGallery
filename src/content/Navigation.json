@@ -12,6 +12,10 @@
     "url": "/about"
   },
   {
+    "text": "News",
+    "url": "/news"
+  },
+  {
     "text": "Contact me",
     "url": "/contact"
   }

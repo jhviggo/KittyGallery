@@ -1,7 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import FrontPage from './views/index.vue';
-import Commissions from './views/commissions/index.vue';
 
 Vue.use(Router);
 
@@ -12,12 +10,12 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: FrontPage
+      component: () => import(/* webpackChunkName: "index" */ './views/index.vue')
     },
     {
       path: '/commissions',
       name: 'commissions',
-      component: Commissions
+      component: () => import(/* webpackChunkName: "commission" */ './views/commissions/index.vue')
     }
   ]
 });
