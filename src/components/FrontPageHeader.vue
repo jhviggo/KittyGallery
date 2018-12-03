@@ -19,7 +19,7 @@ export default class FrontPageHeader extends Vue {
   @Prop({ required: true }) title!: string;
   @Prop({ required: true }) text!: string;
   @Prop({ required: true }) image!: string;
-  @Prop({ required: true }) socials!: Array;
+  @Prop({ required: true }) socials!: Array<Object>;
 }
 </script>
 
