@@ -6,16 +6,30 @@
       :image="image"
       :socials="socials"
     />
+    <div class="container my-4">
+      <image-panel
+        class="py-4 light-border"
+        image="/img/waterfall.jpg"
+        text="Hey guys, I just finished this awesome painting for a friend of mine! If you like it then feel free to follow me on facebook to see updates when i post stuff like this. If you want a commission for a painting or drawing, you can hit me up at the commission page."
+      />
+      <image-panel
+        class="py-4 light-border"
+        image="/img/cat_bubbles.jpg"
+        text="Hey guys, I just finished this awesome painting for a friend of mine! If you like it then feel free to follow me on facebook to see updates when i post stuff like this. If you want a commission for a painting or drawing, you can hit me up at the commission page."
+      />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import FrontPageHeader from '@/components/FrontPageHeader.vue';
+import ImagePanel from '@/components/ImagePanel.vue';
 
 @Component({
   components: {
-    FrontPageHeader
+    FrontPageHeader,
+    ImagePanel
   }
 })
 
@@ -31,3 +45,9 @@ export default class FrontPage extends Vue {
   ];
 }
 </script>
+
+<style scoped>
+.light-border {
+  border-bottom: 1px solid #EFEFEF;
+}
+</style>
