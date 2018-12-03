@@ -2,6 +2,9 @@
   <div>
     <front-page-header
       :title="title"
+      :text="text"
+      :image="image"
+      :socials="socials"
     />
   </div>
 </template>
@@ -17,6 +20,14 @@ import FrontPageHeader from '@/components/FrontPageHeader.vue';
 })
 
 export default class FrontPage extends Vue {
-  title: string = 'Hello.\nI\'m Kitty. Painter & artist from Denmark.';
+  title: string = 'Welcome to KittyGallery';
+  text: string = 'Feel free to look around or follow me on social media!';
+  image: string = '/img/kitty_image.jpg';
+  socials: Array = [
+    {
+      image: '/img/facebook-logo.svg',
+      link: 'https://www.facebook.com/coloursofthekitty/'
+    }
+  ];
 }
 </script>
