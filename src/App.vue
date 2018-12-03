@@ -45,6 +45,7 @@ export default class AppMain extends Vue {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow-y: hidden;
 }
 
 .spacer {
