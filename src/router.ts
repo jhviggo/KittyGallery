@@ -16,6 +16,11 @@ export default new Router({
       path: '/commissions',
       name: 'commissions',
       component: () => import(/* webpackChunkName: "commission" */ './views/commissions/index.vue')
+    },
+    {
+      path: '/gallery',
+      name: 'gallery',
+      component: () => import(/* webpackChunkName: "gallery" */ './views/gallery/index.vue')
     }
   ]
 });
