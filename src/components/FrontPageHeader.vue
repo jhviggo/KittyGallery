@@ -4,7 +4,7 @@
     <h1 class="header__title">{{ title }}</h1>
     <p>{{ text }}</p>
     <div>
-      <a v-for="social in socials" :href="social.link" :key="social.link">
+      <a class="px-1" v-for="social in socials" :href="social.link" :key="social.link">
         <img class="header__social" :src="social.image"/>
       </a>
     </div>

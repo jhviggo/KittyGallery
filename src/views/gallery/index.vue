@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="margin-top-50">
     <image-gallery/>
   </div>
 </template>
@@ -18,3 +18,9 @@ import ImageGallery from '@/components/ImageGallery.vue'
 
 export default class Gallery extends Vue {}
 </script>
+
+<style scoped>
+.margin-top-50 {
+  margin-top: 50px;
+}
+</style>
