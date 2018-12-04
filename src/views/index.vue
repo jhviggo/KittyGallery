@@ -1,12 +1,11 @@
 <template>
   <div>
-    <front-page-header
+    <page-header
+      class="bg-gray"
       :title="title"
       :text="text"
-      :image="image"
-      :socials="socials"
     />
-    <div class="container my-4">
+    <div class="container">
       <image-panel
         class="py-4 light-border"
         image="/img/waterfall.jpg"
@@ -23,12 +22,12 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import FrontPageHeader from '@/components/FrontPageHeader.vue';
+import PageHeader from '@/components/PageHeader.vue';
 import ImagePanel from '@/components/ImagePanel.vue';
 
 @Component({
   components: {
-    FrontPageHeader,
+    PageHeader,
     ImagePanel
   }
 })
@@ -53,5 +52,10 @@ export default class FrontPage extends Vue {
 <style scoped>
 .light-border {
   border-bottom: 1px solid #EFEFEF;
+}
+
+>>> h1 {
+  font-size: 2em;
+  padding-top: 50px;
 }
 </style>

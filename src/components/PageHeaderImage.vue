@@ -1,7 +1,7 @@
 <template>
   <div class="col-12 py-5 header">
-    <img class="header__image" :src="image"/>
-    <h1 class="header__title">{{ title }}</h1>
+    <img class="header__image mb-5" :src="image"/>
+    <h1 class="mb-3 header__title">{{ title }}</h1>
     <p>{{ text }}</p>
     <div>
       <a class="px-1" v-for="social in socials" :href="social.link" :key="social.link">

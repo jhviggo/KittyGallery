@@ -48,6 +48,10 @@ export default class AppMain extends Vue {
   overflow-y: hidden;
 }
 
+.bg-gray {
+  background-color: #eeeeee;
+}
+
 .spacer {
   width: 15vw;
   min-width: 150px;

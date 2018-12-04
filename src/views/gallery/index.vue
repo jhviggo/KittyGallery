@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import FrontPageHeader from '@/components/FrontPageHeader.vue';
+import FrontPageHeader from '@/components/PageHeaderImage.vue';
 import ImageGallery from '@/components/ImageGallery.vue'
 import PageHeader from '@/components/PageHeader.vue';
 

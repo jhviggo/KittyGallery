@@ -16,7 +16,8 @@ module.exports = {
         routes: [
           '/',
           '/gallery',
-          '/commissions'
+          '/commissions',
+          'about'
         ] // .concat(pathEntries)
       })
     ]
