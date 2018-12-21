@@ -7,11 +7,11 @@ public_folder: "/images"
 
 collections:
     ##
-    # Products/cykler/
+    # Paintings
     ##
   - name: "piece"
     label: "Maleri"
-    folder: "src/content/pieces"
+    folder: "src/content/pieces/"
     create: true
     slug: "{{slug}}"
     format: "json"
@@ -23,3 +23,21 @@ collections:
       - {label: "Billeder", name: "images", widget: "list", fields: [
           {label: "Billede", name: "image", widget: "image"}
       ]}
+
+    ##
+    # pages
+    ##
+  - name: "pages"
+    label: "Sider"
+    files:
+      ###
+      ### Contact
+      ###
+      - file: "src/content/contact.json"
+        format: "json"
+        name: "contact"
+        label: "Kontakt"
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Titel billede", name: "titleImage", widget: "image"}
+

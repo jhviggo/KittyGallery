@@ -1,6 +1,6 @@
 const path = require('path')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
-const fg = require('fast-glob');
+// const fg = require('fast-glob');
 
 // const pathEntriesGuides = fg.sync('./content/pages/embeddedGuides/*.*')
 //  .map(entry => `/guides/videoer/${entry.split('/').pop().replace('.json', '')}`);
@@ -17,7 +17,7 @@ module.exports = {
           '/',
           '/gallery',
           '/commissions',
-          'about'
+          '/about'
         ] // .concat(pathEntries)
       })
     ]

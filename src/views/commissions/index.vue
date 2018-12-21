@@ -26,7 +26,7 @@ import NetlifyForm from '@/components/NetlifyForm.vue';
 })
 
 export default class Commissions extends Vue {
-  page: Array<object> = require('@/content/commissions.json');
+  page: Array<object> = require('@/content/contact.json');
   headerText: string = 'Contact me';
   headerImage: string = '/img/commission_header.jpg';
   formText: string = 'click me';
