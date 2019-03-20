@@ -2,20 +2,20 @@
   <div>
     <page-header
       class="bg-gray"
-      :title="title"
-      :text="text"
+      :title="data.title"
+      :text="data.description"
     />
     <div class="container">
-      <image-panel
-        class="py-4 light-border"
-        image="/img/waterfall.jpg"
-        text="Hey guys, I just finished this awesome painting for a friend of mine! If you like it then feel free to follow me on facebook to see updates when i post stuff like this. If you want a commission for a painting or drawing, you can hit me up at the commission page."
-      />
-      <image-panel
-        class="py-4 light-border"
-        image="/img/cat_bubbles.jpg"
-        text="Hey guys, I just finished this awesome painting for a friend of mine! If you like it then feel free to follow me on facebook to see updates when i post stuff like this. If you want a commission for a painting or drawing, you can hit me up at the commission page."
-      />
+      <div v-for="article in imageArticles" :key="article.id">
+        <image-panel
+          class="my-4"
+          :title="article.title"
+          :image="article.image"
+          :image-alt="article.imageAlt"
+          :description="article.description"
+          :button-text="data.buttonText"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -25,6 +25,9 @@ import { Component, Vue } from 'vue-property-decorator';
 import PageHeader from '@/components/PageHeader.vue';
 import ImagePanel from '@/components/ImagePanel.vue';
 
+import { getHomeView, getImageArticle } from '@/utils/contentful';
+import { HomeView, ImageArticle } from '@/interfaces/contentful';
+
 @Component({
   components: {
     PageHeader,
@@ -33,9 +36,15 @@ import ImagePanel from '@/components/ImagePanel.vue';
 })
 
 export default class FrontPage extends Vue {
-  title: string = 'Welcome to Colours of the Kitty';
-  text: string = 'Feel free to look around or follow me on social media!';
-  image: string = '/img/kitty_image.jpg';
+  data: HomeView = new HomeView();
+
+  imageArticles: Array<ImageArticle> = [];
+
+  async created(): Promise<void> {
+    this.data = await getHomeView();
+    this.imageArticles = await getImageArticle();
+  }
+
   socials: Array<Object> = [
     {
       image: '/img/facebook-logo.svg',
