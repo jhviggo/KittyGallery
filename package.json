@@ -9,6 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "contentful": "^7.4.3",
     "copy-webpack-plugin": "^4.6.0",
     "prerender-spa-plugin": "^3.4.0",
     "register-service-worker": "^1.0.0",

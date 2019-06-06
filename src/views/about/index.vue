@@ -1,9 +1,10 @@
 <template>
   <div class="bg-gray h-100">
     <page-header-image
-      :title="title"
-      :text="text"
-      :image="image"
+      :title="data.title"
+      :text="data.desc"
+      :image="data.image"
+      :image-alt="data.imageAlt"
       :socials="socials"
     />
   </div>
@@ -13,6 +14,8 @@
 import { Component, Vue } from 'vue-property-decorator';
 import PageHeaderImage from '@/components/PageHeaderImage.vue';
 import ImagePanel from '@/components/ImagePanel.vue';
+import { getAboutMeView } from '@/utils/contentful';
+import { AboutMeView } from '@/interfaces/contentful';
 
 @Component({
   components: {
@@ -22,9 +25,13 @@ import ImagePanel from '@/components/ImagePanel.vue';
 })
 
 export default class FrontPage extends Vue {
-  title: string = 'Welcome to Colours of the Kitty';
-  text: string = 'My name is Kitty Petersen, i am an artist from Denmark. I love to paint, draw and create art, which i strive to do as much as possible.';
-  image: string = '/img/kitty_image.jpg';
+  data: AboutMeView = new AboutMeView();
+
+  async created(): Promise<void> {
+    this.data =  await getAboutMeView();
+    console.log(this.data);
+  }
+
   socials: Array<Object> = [
     {
       image: '/img/facebook-logo.svg',

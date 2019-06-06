@@ -1,6 +1,6 @@
 <template>
   <div class="col-12 py-5 header">
-    <img class="header__image mb-5" :src="image"/>
+    <img class="header__image mb-5" :src="image" :alt="imageAlt"/>
     <h1 class="mb-3 header__title">{{ title }}</h1>
     <p>{{ text }}</p>
     <div>
@@ -19,6 +19,7 @@ export default class FrontPageHeader extends Vue {
   @Prop({ required: true }) title!: string;
   @Prop({ required: true }) text!: string;
   @Prop({ required: true }) image!: string;
+  @Prop({ required: true }) imageAlt!: string;
   @Prop({ required: true }) socials!: Array<Object>;
 }
 </script>
